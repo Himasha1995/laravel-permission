@@ -13,28 +13,28 @@ erDiagram
         string title
         string meta_title
         string slug
-         string summery
-          int published
+        string summery
+        int published
         string content
     }
   
    POST_CATEGORIES {
-       unsigned id
+        unsigned id
         int post_id
         int category_id
       
     }
     CATEGORIES ||--o{ POST_CATEGORIES : post_cat
    CATEGORIES {
-       unsigned id
+        unsigned id
         int parent_id
         string title
         string meta_title
         string slug
-         string content
+        string content
     }
     POST_META {
-         unsigned id
+        unsigned id
         int post_id
         string content
        
@@ -42,7 +42,7 @@ erDiagram
    POST_COMMENTS {
         unsigned id
         int post_id
-         int parent_id
+        int parent_id
         string title
         int published
         string published
@@ -50,16 +50,16 @@ erDiagram
     }
      TAGS ||--o{ POST_TAGS : post_cat
    TAGS {
-         unsigned id
+        unsigned id
         string title
         string meta_title
         string slug
-         string content
+        string content
     }
    POST_TAGS{
-         unsigned id
+        unsigned id
         int post_id
-          int tag_id
+        int tag_id
     }
 
 ```
